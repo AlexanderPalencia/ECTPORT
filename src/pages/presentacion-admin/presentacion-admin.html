@@ -1,0 +1,35 @@
+<!--
+  Generated template for the PresentacionAdminPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>presentacionAdmin</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-fab right bottom>
+        <button ion-button outline (click)="sigueiteSlide()">Siguiente</button>
+    </ion-fab>
+      
+    <ion-fab left bottom>
+          <button ion-button outline (click)="AnteriorSlide()">Anterior</button>
+    </ion-fab>
+
+    <ion-slides pager=true>
+        <ion-slide *ngFor="let slide of slider" (ionSlideDidCHange)="slidechanged()">
+          <img [src]="slide.image"/>
+          <h2 [innerHTML]="slide.title"></h2>
+          <p [innerHTML]="slide.description"></p>
+    
+        </ion-slide>
+      </ion-slides>
+      
+    
+</ion-content>

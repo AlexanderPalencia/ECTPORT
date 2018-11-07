@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Log In ECT  
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h4>ECT una solucion para los estudios</h4> 
+  <p>
+    Ingresa a tu sala o crea una nueva. 
+  </p>
+
+  <ion-list>
+    <ion-item>
+      <ion-input type="number" placeholder="Numero de sala" [(ngModel)]="NumeroSala"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button outline (click)="IngresarSala()">Ingresar a Sala</button>
+  
+  <button ion-button outline (click)="CrearSala()">Crear Sala</button>
+
+</ion-content>
